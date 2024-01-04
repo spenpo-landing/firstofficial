@@ -1,0 +1,37 @@
+{
+  "name": "landing-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.2",
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "argon2": "^0.31.0",
+    "aws-sdk": "^2.1480.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "next": "^13.4.19",
+    "next-auth": "^4.23.0",
+    "octokit": "^3.1.0",
+    "react": "18.2.0",
+    "react-color": "^2.19.3",
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-social-icons": "^5.15.0",
+    "react-timer-hook": "^3.0.7",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/react-color": "^3.0.6"
+  }
+}
