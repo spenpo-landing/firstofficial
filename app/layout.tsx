@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: process.env.NEXT_PUBLIC_NAME,
       images: [
         new URL(`${metadataBase}${process.env.NEXT_PUBLIC_HEADSHOT}`),
-        '/default.svg',
+        // '/default.svg',
       ],
       locale: 'en_US',
       type: 'website',
@@ -68,7 +68,7 @@ export async function generateMetadata(): Promise<Metadata> {
       creator: '@s_pop3',
       images: [
         new URL(`${metadataBase}${process.env.NEXT_PUBLIC_HEADSHOT}`),
-        '/default.svg',
+        // '/default.svg',
       ],
     },
   }
