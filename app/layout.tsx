@@ -23,15 +23,19 @@ export function generateViewport() {
 // }
 
 export async function generateMetadata(): Promise<Metadata> {
+  const metadataBase = new URL(`https://${process.env.VERCEL_URL}`)
   return {
-    metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
+    metadataBase,
     title: process.env.NEXT_PUBLIC_NAME,
     description: process.env.NEXT_PUBLIC_TITLE,
     openGraph: {
       title: process.env.NEXT_PUBLIC_NAME,
       description: process.env.NEXT_PUBLIC_TITLE,
       siteName: process.env.NEXT_PUBLIC_NAME,
-      images: [new URL(`${process.env.NEXT_PUBLIC_HEADSHOT}`), '/default.svg'],
+      images: [
+        new URL(`${metadataBase}${process.env.NEXT_PUBLIC_HEADSHOT}`),
+        '/default.svg',
+      ],
       locale: 'en_US',
       type: 'website',
     },
@@ -54,7 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: process.env.NEXT_PUBLIC_HEADSHOT,
       other: {
         rel: 'apple-touch-icon-precomposed',
-        url: new URL(`${process.env.NEXT_PUBLIC_HEADSHOT}`),
+        url: new URL(`${metadataBase}${process.env.NEXT_PUBLIC_HEADSHOT}`),
       },
     },
     twitter: {
@@ -62,7 +66,10 @@ export async function generateMetadata(): Promise<Metadata> {
       title: process.env.NEXT_PUBLIC_NAME,
       description: process.env.NEXT_PUBLIC_TITLE,
       creator: '@s_pop3',
-      images: [new URL(`${process.env.NEXT_PUBLIC_HEADSHOT}`), '/default.svg'],
+      images: [
+        new URL(`${metadataBase}${process.env.NEXT_PUBLIC_HEADSHOT}`),
+        '/default.svg',
+      ],
     },
   }
 }
