@@ -1,4 +1,4 @@
-import { ResolvingMetadata, type Metadata } from 'next'
+import { type Metadata } from 'next'
 import { NextAuthProvider } from './context/nextAuthProvider'
 import { CmsContextProvider } from './context/cms'
 import { EnvContextProvider } from './context/env'
@@ -17,12 +17,12 @@ export function generateViewport() {
   }
 }
 
-type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
+// type Props = {
+//   params: { id: string }
+//   searchParams: { [key: string]: string | string[] | undefined }
+// }
 
-export async function generateMetadata(_props: Props): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
     title: process.env.NEXT_PUBLIC_NAME,
